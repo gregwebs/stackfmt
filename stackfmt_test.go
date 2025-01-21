@@ -77,6 +77,14 @@ func TestStackTraceFormat(t *testing.T) {
 	}
 }
 
+func TestNewStackLocation(t *testing.T) {
+	got := NewStack().StackTrace()
+	want := NewStack().StackTrace()
+	if got[0] == want[0] {
+		t.Errorf("NewStack: lines are the same. want: %v, got: %v", want, got)
+	}
+}
+
 func TestNewStack(t *testing.T) {
 	got := NewStackSkip(1).StackTrace()
 	want := NewStackSkip(1).StackTrace()

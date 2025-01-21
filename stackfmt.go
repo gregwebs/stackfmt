@@ -146,7 +146,7 @@ func (s Stack) Frames() []Frame {
 }
 
 func NewStack() Stack {
-	return NewStackSkip(2)
+	return NewStackSkip(1)
 }
 
 func NewStackSkip(skip int) Stack {
